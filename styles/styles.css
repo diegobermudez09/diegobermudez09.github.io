@@ -1,0 +1,532 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.8rem;
+    --tw-bg-opacity: 1;
+    --tw-text-opacity: 1;
+    color: rgb(147 162 181/0.8);
+    background: rgb(70, 40, 120)url(../img/bg.svg) no-repeat center center fixed;
+    background-size: cover;
+
+    margin: 0;
+}
+
+
+ul,
+li,
+a {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+
+/* Home */
+
+.home {
+    min-height: 100svh;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.home__barra {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: fit-content;
+    margin-top: 1rem;
+    z-index: 30;
+    inset: 0;
+    position: fixed;
+}
+
+.home__contenedor {
+    max-width: 44rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    width: 100%;
+
+}
+
+.home__navegacion {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    /* Color blanco con opacidad */
+    border-radius: 9999px;
+    color: white;
+    font-weight: 500;
+    display: flex;
+
+
+}
+
+.home__nav {
+    flex-grow: 1;
+    box-sizing: border-box;
+    padding: 1rem;
+    @media (min-width: 768px){
+        padding: 1rem 2rem;
+        
+    }
+
+    a:hover {
+        color: rgba(128, 0, 128); /* Color del enlace al pasar el cursor */
+        
+    }
+
+}
+
+.home__informacion {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    inset: 0;
+
+    width: 100%;
+    padding: 30rem 1rem;
+}
+
+.home__foto {
+    color: transparent;
+    border-radius: 9999px;
+    height: 30rem;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.home__nombre {
+    --tw-text-opacity: 1;
+    color: white;
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+.home__datos {
+    --tw-text-opacity: 1;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+.home__links {
+    color: rgba(255, 255, 255, 0.8);
+    /* color svg*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    gap: .75rem;
+}
+
+.home__links--conoceme {
+
+    padding: .5rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    /* Color blanco con opacidad */
+
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 14rem;
+    /* Establece el ancho máximo */
+
+}
+
+.home__links--conoceme svg {
+
+    width: 10rem;
+    /* Ajusta el ancho de la imagen SVG */
+    height: 2rem;
+    /* Ajusta la altura de la imagen SVG */
+    fill: rgba(255, 255, 255);
+    /* Establece el color de relleno del SVG */
+}
+
+
+/* About me */
+
+.about {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 15rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+
+}
+
+
+.about__contenedor {
+
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: .375rem;
+    max-width: 140rem;
+    background-color: rgba(128, 0, 128, 0.1);
+
+    padding: 5rem 0;
+    margin-bottom: 30rem;
+
+    @media (min-width: 768px) {
+        display: flex;
+    }
+}
+
+.about__me,
+.about__habilidades {
+
+    flex: 1;
+    /* Para que ambos elementos ocupen el mismo espacio */
+    padding: 0 3rem;
+}
+
+.about__me{
+    padding-bottom: 2rem;
+    @media (min-width: 768px){
+            padding-bottom: 0;
+    }
+}
+
+.about__me-titulo {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__me-descripcion {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.about__habilidades-titulo {
+    color: white;
+    margin-left: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.about__habilidades-skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Tres columnas de igual ancho */
+    gap: 5rem;
+    /* Espacio entre las habilidades */
+    justify-items: center;
+    /* Centrar las habilidades horizontalmente */
+    align-items: center;
+    /* Centrar las habilidades verticalmente */
+    padding-top: 2rem;
+    text-align: center;
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+.about__habilidades-skill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: hsla(270, 100%, 90%, 0.8);
+
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 12rem;
+    border-radius: .5rem;
+
+    h5 {
+        margin: 0;
+    }
+
+    svg {
+        font-size: 3rem;
+        line-height: 1;
+        color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+
+
+/* projects */
+
+.projects {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 15rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+
+    h3 {
+        color: white;
+        font-size: 3rem;
+    }
+
+}
+
+.project-link {
+    
+    text-decoration: none;
+    margin-top: 5rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: .375rem;
+    background-color: rgba(128, 0, 128, 0.1);
+    padding: 4rem 2.5rem;
+    @media (min-width: 768px){
+        display: flex; 
+    }
+}
+
+.project__info {
+    flex: 1;
+    /* Hace que el contenido ocupe el doble de espacio que la imagen */
+    margin-right: 20px;
+    /* Espacio entre el contenido y la imagen */
+    color: rgba(255, 255, 255, 0.8);
+
+    h5 {
+        margin: 0;
+        color: white;
+        font-size: 2.5rem;
+    }
+}
+
+.project__image {
+    flex: 1;
+    /* La imagen ocupa el 1/3 del espacio disponible */
+    display: flex;
+    /* Agregamos flex para asegurarnos de que la imagen ocupe todo el espacio */
+    align-items: center;
+    /* Centramos la imagen verticalmente */
+}
+
+.project__image img {
+    max-width: 100%;
+    /* Establecemos el ancho máximo de la imagen al 100% */
+    max-height: 100%;
+    /* Establecemos la altura máxima de la imagen al 100% */
+    object-fit: contain;
+    /* Mantenemos la relación de aspecto de la imagen y la ajustamos para llenar el contenedor */
+    border-radius: .5rem;
+    /* Radio de borde para suavizar las esquinas */
+}
+
+
+
+/* contact */
+
+.contact {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 15rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+
+}
+
+.projects__contenedor {
+    padding: 5rem 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 140rem;
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30rem;
+}
+
+.contact__contenedor {
+    padding: 5rem 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 140rem;
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30rem;
+
+}
+
+.contact__titulo {
+    color: white;
+    font-size: 1.5rem;
+    margin: 3rem 0 0 0;
+}
+
+.contact__descripcion {
+    color: white;
+    font-size: 3rem;
+}
+
+.contenedor__formulario {
+    padding: 4rem 2.5rem;
+    display: flex;
+    flex-direction: row;
+    /* Disposición horizontal */
+    justify-content: space-between;
+    /* Espacio entre el formulario y la imagen */
+    margin-top: 5rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: .5rem;
+    background-color: rgba(128, 0, 128, 0.1);
+}
+
+.contact_formulario {
+    display: flex;
+    flex-direction: column;
+    /* Disposición vertical del formulario */
+    flex: 1;
+    /* Tomar el mismo espacio */
+}
+
+.contact__imagen {
+    display: none;
+    align-items: center;
+    /* Alinear verticalmente al centro */
+    justify-content: center;
+    /* Alinear horizontalmente al centro */
+    flex: 1;
+    /* Tomar el mismo espacio */
+
+    @media (min-width: 768px){
+            display: flex;
+    }
+}
+
+.formulario__Contact {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    /* Espacio entre los campos del formulario */
+}
+
+.formulario__Contact label {
+    margin-bottom: 1rem;
+    /* Espacio entre el label y el input */
+    color: white;
+}
+
+.formulario__Contact input {
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: .5rem;
+    height: 2.5rem;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+.formulario__Contact textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 0.5rem;
+    resize: vertical;
+    /* Permite que el textarea sea redimensionable verticalmente */
+    min-height: 100px;
+    /* Altura mínima del textarea */
+    max-height: 200px;
+    /* Altura máxima del textarea */
+    resize: none;
+}
+
+input[type="submit"] {
+    background-color: white;
+    /* Color de fondo */
+    color: black;
+    /* Color del texto */
+    padding: 14px 20px;
+    /* Espaciado interno */
+    margin: 8px 0;
+    /* Margen exterior */
+    border: none;
+    /* Sin borde */
+    cursor: pointer;
+    /* Cursor de puntero */
+    border-radius: 4px;
+    /* Bordes redondeados */
+    width: 100%;
+    font-weight: bold;
+}
+
+.contact__imagen {
+    color: white;
+    --tw-text-opacity: 1;
+    font-size: 15rem;
+    line-height: 1;
+
+}
+
+
+.footer__contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+
+    p {
+        color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+.footer__links--conoceme svg {
+
+    width: 13rem;
+    /* Ajusta el ancho de la imagen SVG */
+    height: 2rem;
+    /* Ajusta la altura de la imagen SVG */
+    fill: rgba(255, 255, 255, 0.8);
+    /* Establece el color de relleno del SVG */
+
+
+}
+
+.formulario__Contact {
+    margin-bottom: 1rem;
+}
+
+.alerta {
+    color: red;
+   
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+
+}
+
+.hidden {
+    display: none;
+}
